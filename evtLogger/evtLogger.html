@@ -1,0 +1,54 @@
+<head>
+  <title>evtLogger</title>
+</head>
+
+
+<body>
+<h4>EVRYTHNG Reactor Logs</h4>
+{{> showLogs}}
+</body>
+
+<template name="showLogs">
+  <div class="container">
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <div class="row">
+          <label for="appId" class="col-sm-2 control-label">App Id</label>
+          <div class="col-sm-10">
+            <input type="input" class="form-control" id="appId"  value="{{appId}}">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <label for="opKey" class="col-sm-2 control-label">Operator Key</label>
+          <div class="col-sm-10">
+            <input type="input" class="form-control" id="opKey" value="{{opKey}}">
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="row">
+      <span class="col-sm-2"></span>
+      <span class="col-sm-10">
+        <button type="button" class="btn btn-primary get-logs">Get Logs</button>
+        <button type="button" class="btn btn-default auto-refresh">Auto Refresh</button>
+        <br>
+      </span>
+    </div>
+
+
+    <div id="simpleResult">
+      <table class="table table-condensed">
+
+      {{#each result}}
+        <tr>
+          <td>{{message}}</td>
+          <td>{{timestamp}}</td>
+        </tr>
+      {{/each}}
+      </table>
+    </div>
+  </div>
+
+</template>
