@@ -33,20 +33,33 @@
       <span class="col-sm-10">
         <button type="button" class="btn btn-primary get-logs">Get Logs</button>
         <button type="button" class="btn btn-default auto-refresh">Auto Refresh</button>
+        <span>     Last Run On :  {{lastRun}}</span>
         <br>
       </span>
     </div>
 
-
     <div id="simpleResult">
       <table class="table table-condensed">
 
-      {{#each result}}
-        <tr>
-          <td>{{message}}</td>
-          <td>{{timestamp}}</td>
-        </tr>
-      {{/each}}
+        <th>Message</th>
+        <th>When</th>
+        <tbody>
+        {{#each result}}
+
+            {{#if error}}
+              <tr class="danger">
+              <td >{{message}}</td>
+              <td>{{timestamp}}</td>
+              </tr>
+            {{else}}
+            <tr>
+              <td >{{message}}</td>
+              <td>{{timestamp}}</td>
+            </tr>
+            {{/if}}
+
+        {{/each}}
+        </tbody>
       </table>
     </div>
   </div>

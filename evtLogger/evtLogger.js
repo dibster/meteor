@@ -10,13 +10,23 @@ if (Meteor.isClient) {
     },
     opKey: function () {
       return Session.get("Operator Key");
+    },
+    lastRun: function () {
+      return Session.get("Last Refresh");
     }
   });
 
   Template.showLogs.result = function () {
     console.log('reformat here');
     var result =  _.map(Session.get('serverSimpleResponse'), function(message){
-      message.timestamp = moment.unix(message.timestamp).format("MM/DD/YYYY");
+      var formattedDate = new Date(message.timestamp / 1000)
+      message.timestamp = moment.unix(formattedDate).fromNow();
+      if (message.logLevel === 'debug') {
+        message.error = false;
+      }
+      else {
+        message.error = true;
+      }
       return message;
     });
     return result  || "";
@@ -25,6 +35,11 @@ if (Meteor.isClient) {
   Template.showLogs.events({
     'click .get-logs': function () {
       // increment the counter when button is clicked
+      var today = new Date();
+      Session.set('serverSimpleResponse', []);
+
+      Session.set("Last Refresh", today.toString());
+
       Meteor.call('fetchFromEVRYTHNG',Session.get("Application Id"),Session.get("Operator Key"),function(err, response) {
         Session.set('serverSimpleResponse', response);
       });
