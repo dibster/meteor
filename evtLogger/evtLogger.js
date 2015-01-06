@@ -1,7 +1,6 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault("Application Id", "5433af7f50522a29bb732c7a");
-  Session.setDefault("Operator Key", "I1gL9iHt3IEsn2icY6NFXreEFl3lP62HTM40neKxJrRV3Dkis3dTTmNulzZoLlBxJA1Zj0ybU1g7BVeI");
+  //Session.setDefault("Application Id", "5433af7f50522a29bb732c7a");
+  //Session.setDefault("Operator Key", "I1gL9iHt3IEsn2icY6NFXreEFl3lP62HTM40neKxJrRV3Dkis3dTTmNulzZoLlBxJA1Zj0ybU1g7BVeI");
 
 
   Template.showLogs.helpers({
@@ -17,16 +16,11 @@ if (Meteor.isClient) {
   });
 
   Template.showLogs.result = function () {
-    console.log('reformat here');
+
     var result =  _.map(Session.get('serverSimpleResponse'), function(message){
-      var formattedDate = new Date(message.timestamp / 1000)
+      var formattedDate = new Date(message.timestamp / 1000);
       message.timestamp = moment.unix(formattedDate).fromNow();
-      if (message.logLevel === 'debug') {
-        message.error = false;
-      }
-      else {
-        message.error = true;
-      }
+      message.error = message.logLevel !== 'debug';
       return message;
     });
     return result  || "";
@@ -36,12 +30,19 @@ if (Meteor.isClient) {
     'click .get-logs': function () {
       // increment the counter when button is clicked
       var today = new Date();
+      Session.set("Application Id",appId.value);
+      Session.set("Operator Key",opKey.value);
       Session.set('serverSimpleResponse', []);
 
       Session.set("Last Refresh", today.toString());
 
       Meteor.call('fetchFromEVRYTHNG',Session.get("Application Id"),Session.get("Operator Key"),function(err, response) {
-        Session.set('serverSimpleResponse', response);
+        if (typeof response == 'undefined') {
+          Session.set('serverSimpleResponse', [{message : 'No Data Returned'}]);
+        }
+        else {
+          Session.set('serverSimpleResponse', response);
+        }
       });
     },
     'click .auto-refresh': function () {
