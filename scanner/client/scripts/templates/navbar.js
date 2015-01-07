@@ -1,6 +1,6 @@
 Template.navbar.helpers({
-  projectId: function () {
-    return Session.get("Project Id");
+  projectKey: function () {
+    return Session.get("Project Key");
   }
 });
 

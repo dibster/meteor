@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
-
-  //Session.setDefault("Operator Key", "I1gL9iHt3IEsn2icY6NFXreEFl3lP62HTM40neKxJrRV3Dkis3dTTmNulzZoLlBxJA1Zj0ybU1g7BVeI");
+  // startup
+  Session.setDefault("Project Key", "I1gL9iHt3IEsn2icY6NFXreEFl3lP62HTM40neKxJrRV3Dkis3dTTmNulzZoLlBxJA1Zj0ybU1g7BVeI");
 
 
 }
