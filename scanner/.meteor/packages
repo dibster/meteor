@@ -12,3 +12,4 @@ nemo64:bootstrap
 less
 momentjs:moment
 mquandalle:bower
+mrt:external-file-loader

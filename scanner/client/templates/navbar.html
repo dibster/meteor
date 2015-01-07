@@ -1,3 +1,7 @@
+<!--
+Template for navigation bar
+-->
+
 <template name="navbar">
   <nav class="navbar navbar-inverse" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -14,10 +18,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
       <ul class="nav navbar-nav">
-        <li ><a href="#/products">Products</a></li>
-        <li class="active"><a href="#/admin">Administration</a></li>
-        <li class="active" data-ng-click="resetVisits()"><a href="#/" >Reset Visits({{visits}})</a></li>
+        <li><a href="#/products">Products</a></li>
+        <li><a href="#/admin">Campaigns</a></li>
+        <li><a href="#/admin">Scan Type</a></li>
+        <li class="active" data-ng-click="resetVisits"><a href="#/" >Reset Visits({{visits}})</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
+    </div>
   </nav>
 </template>
