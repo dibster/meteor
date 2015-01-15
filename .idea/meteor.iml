@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/evtLogger/.meteor/local" />
+      <excludeFolder url="file://$MODULE_DIR$/polymer-demo-master/.meteor/local" />
       <excludeFolder url="file://$MODULE_DIR$/scanner/.meteor/local" />
       <excludeFolder url="file://$MODULE_DIR$/simple-todos/.meteor/local" />
     </content>
