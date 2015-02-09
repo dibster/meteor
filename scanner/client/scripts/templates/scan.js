@@ -38,10 +38,7 @@ Template.scan.events({
     console.log('scanning with object ', scanThng);
     scanThng.identify({
       type: 'objpic',
-      redirect: false,
-      createScanAction : true,
-      createAnonymousUser : true,
-      spinner : { auto: true }}
+      redirect: false}
     ).then(
       scanSuccess,
       scanError
@@ -53,6 +50,7 @@ Template.scan.events({
 
       trackJs.track('Image Recognised' + JSON.stringify(data));
       console.log('success', data);
+      Router.go('/campaign');
 
     };
 

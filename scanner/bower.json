@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "scanner",
   "version": "0.0.1",
   "dependencies": {
     "evrythng": "~2.1.0",

@@ -2,8 +2,11 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/connected-ui/.meteor/local" />
       <excludeFolder url="file://$MODULE_DIR$/evtLogger/.meteor/local" />
+      <excludeFolder url="file://$MODULE_DIR$/meteor-mqtt-master/.meteor/local" />
       <excludeFolder url="file://$MODULE_DIR$/polymer-demo-master/.meteor/local" />
+      <excludeFolder url="file://$MODULE_DIR$/scandemo/.meteor/local" />
       <excludeFolder url="file://$MODULE_DIR$/scanner/.meteor/local" />
       <excludeFolder url="file://$MODULE_DIR$/simple-todos/.meteor/local" />
     </content>

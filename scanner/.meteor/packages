@@ -13,3 +13,4 @@ less
 momentjs:moment
 mquandalle:bower
 mrt:external-file-loader
+iron:router
