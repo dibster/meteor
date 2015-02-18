@@ -1,7 +1,7 @@
 // Progress Bar
 //TODO https://github.com/lightningtgc/MProgress.js
 //Velocity
-//TODO Velocity
+//unComment Velocity in meteor/packages.json
 
 // is Added
 
