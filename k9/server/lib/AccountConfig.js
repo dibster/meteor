@@ -5,6 +5,5 @@ Accounts.config({
     return _.contains(allowed, domain);
   }
 });
-/**
- * Created by dibster on 18/02/15.
- */
+
+
