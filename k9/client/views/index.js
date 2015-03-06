@@ -1,5 +1,6 @@
 Template.index.rendered = function() {
 
+
 };
 
 Template.index.helpers({
