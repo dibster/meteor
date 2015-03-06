@@ -5,7 +5,7 @@ Router.configure({
 });
 
 Router.onBeforeAction(function() {
-  if (! Meteor.userId()) {
+  if (!Meteor.userId()) {
     this.render('login');
   } else {
     this.next();
