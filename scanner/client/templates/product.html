@@ -1,4 +1,4 @@
-<template name="Products">
+<template name="product">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,7 +11,19 @@
 
   <body>
   {{> navbar}}
-  This is the products screen
+  {{#if foundproduct}}
+  {{foundproduct}}
+  <div class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object" src="..." alt="...">
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading">Media heading</h4>
+      {{foundproduct.description}}
+    </div>
+  </div>
+  {{/if}}
+
   </body>
 
 </template>

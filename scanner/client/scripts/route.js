@@ -6,8 +6,8 @@ Router.route('/campaign', function () {
   this.render('Campaign');
 });
 
-Router.route('/products', function () {
-  this.render('Products');
+Router.route('/product/:id', function () {
+  this.render('Product');
 });
 
 Router.route('/admin', function () {

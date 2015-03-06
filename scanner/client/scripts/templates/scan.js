@@ -11,7 +11,7 @@ Template.scan.rendered = function () {
 
     // Create the EVT Objects on render
 
-    var projectKey = 'ucGgQiSMTYa6rl0VjJzBPCcCfK6xRwa4uiMTCxH8C4JUetqnjbscuxi9YPDLQKmASp5uR1jQo0Sbauui';
+    var projectKey = 'QSfS1Vw6Lz3x3LF6VE4pkFe4GyFFxUjqTnYBGQ41iCBmoPzzUinRj8m4Y2xVTQGwbxmlj9Gk382elo0N';
     // Instantiate Base EVRYTHNG Object
     app = new EVT.App(projectKey);
     // configure ScanThng
@@ -48,16 +48,15 @@ Template.scan.events({
 
       // image recognised
 
-      trackJs.track('Image Recognised' + JSON.stringify(data));
       console.log('success', data);
-      Router.go('/campaign');
+      Router.go('/product/' + data.evrythngId);
 
     };
 
     function scanError(err) {
 
       // image not recognised
-      trackJs.track('Image Not Recognised'  + err);
+
       console.log('error', err);
 
     }

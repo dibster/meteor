@@ -1,24 +1,50 @@
 <template name="index">
-  <!--<i class="mdi-editor-insert-drive-file" ></i>-->
-  <!--<i class="mdi-action-favorite mdi-material-teal" style="font-size: 40pt;"></i>-->
+
   <hr class="">
   <div class="container">
-    <div class="row">
 
-      <div class="col-md-2">
-        <div class="panel panel-default">
+    <div class="grid-container">
+
+      {{#each evrythngaccounts}}
+
+      <div class="col-md-4">
+        <div class="panel panel-primary">
           <div class="panel-heading">
-
-            <h3 class="panel-title">Coca Cola UAT</h3>
+            <h3 class="panel-title">{{name}}</h3>
           </div>
           <div class="panel-body">
-            <h4>Scans <span class="badge pull-right">800</span></h4>
+            <h4>Total Scans <span class="badge pull-right">{{scans}}</span></h4>
+            <h4>Today<span class="badge pull-right">5</span></h4>
           </div>
         </div>
       </div>
+
+      {{/each}}
+
     </div>
-    <!--/row-->
-  </div>
+
+    <!--<div id="container" class="js-isotope"-->
+         <!--data-isotope-options='{ "itemSelector": ".item", "layoutMode": "masonry"}'>-->
+      <!--{{#each evrythngaccounts}}-->
+
+      <!--<div class="item">-->
+        <!--<div class="panel panel-primary">-->
+          <!--<div class="panel-heading">-->
+
+            <!--<h3 class="panel-title">{{name}}</h3>-->
+          <!--</div>-->
+          <!--<div class="panel-body">-->
+            <!--<h4>Total Scans <span class="badge pull-right">{{scans}}</span></h4>-->
+            <!--<h4>Today<span class="badge pull-right">5</span></h4>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+    <!--{{/each}}-->
+
+  <!--</div>-->
+</div>
+
   <!--/container -->
 
 </template>

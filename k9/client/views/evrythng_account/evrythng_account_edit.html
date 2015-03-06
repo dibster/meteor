@@ -1,0 +1,45 @@
+<!-- Generated on 2015-02-18 by meteor-stock. Edit me! -->
+<template name="evrythngaccountEdit">
+    <div class="container">
+    {{#with evrythngaccount}}
+    <h2>Edit Evrythng Account Details</h2>
+      <form class="form-horizontal" role="form">
+
+        
+            <div class="form-group">
+
+              <label for="inputname" class="col-sm-2 control-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="name" id="inputname" value="{{name}}">
+              </div>
+            </div>
+        
+            <div class="form-group">
+
+              <label for="inputkey" class="col-sm-2 control-label">Key</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="key" id="inputkey" value="{{key}}">
+              </div>
+            </div>
+        
+            <div class="form-group">
+
+              <label for="inputscans" class="col-sm-2 control-label">Scans</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="scans" id="inputscans" value="{{scans}}">
+              </div>
+            </div>
+        
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button class="btn btn-material-grey delete">Delete</button>
+            <button class="btn btn-material-grey cancel">Cancel</button>
+          </div>
+        </div>
+
+      </form>
+    {{/with}}
+    </div>
+</template>

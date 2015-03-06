@@ -1,7 +1,23 @@
 Template.index.rendered = function() {
-  // things to do when the template is finished rendering
-  $.material.init();
+  $('.grid-container').imagesLoaded(function() {
+    $('.grid-container').isotope({
+      itemSelector: '.item',
+      layoutMode: 'masonry',
+      masonry: {
+        columnWidth: 200
+      }
+    })
+  })
 };
+
+Template.index.helpers({
+
+  evrythngaccounts: function() {
+
+    return EvrythngAccounts.find({}, {sort: {createdAt: -1}});
+  }
+
+});
 
 Template.index.events({
   //".my-button click": function() {',

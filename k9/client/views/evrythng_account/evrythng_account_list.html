@@ -1,0 +1,39 @@
+<!-- Generated on 2015-02-18 by meteor-stock. Edit me! -->
+<template name="evrythngaccountsList">
+  <div class="container">
+    <h2>Evrythng Accounts</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          
+            <th>Name</th>
+          
+            <th>Key</th>
+          
+            <th>Scans</th>
+          
+          <th>Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each evrythngaccounts}}
+          {{> evrythngaccountItem}}
+        {{/each}}
+      </tbody>
+    </table>
+    <button class="btn btn-primary new">Add Account</button>
+  </div>
+</template>
+
+<template name="evrythngaccountItem">
+  <tr>
+    
+      <td>{{name}}</td>
+    
+      <td>{{key}}</td>
+    
+      <td>{{scans}}</td>
+    
+    <td><a href="{{pathFor "evrythngaccountDetail"}}">detail</a></td>
+  </tr>
+</template>
