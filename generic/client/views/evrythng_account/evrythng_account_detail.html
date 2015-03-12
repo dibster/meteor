@@ -1,0 +1,36 @@
+<!-- Generated on 2015-02-18 by meteor-stock. Edit me! -->
+<template name="evrythngaccountDetail">
+  <div class="container">
+
+{{#with evrythngaccount}}
+
+    <h2>Evrythng Account Details</h2>
+    <table class="table-bordered table-striped">
+      <tbody>
+
+          <tr>
+            <th class="col-md-3">Name</th>
+            <td class="col-md-9">{{name}}</td>
+          </tr>
+        
+          <tr>
+            <th class="col-md-3">Key</th>
+            <td class="col-md-9">{{key}}</td>
+          </tr>
+        
+          <tr>
+            <th class="col-md-3">Scans</th>
+            <td class="col-md-9">{{scans}}</td>
+          </tr>
+        
+
+      </tbody>
+    </table>
+    <hr>
+    <button type="button" class="btn btn-primary edit-evrythngaccount">Edit</button>
+    <button type="button" class="btn btn-material-grey list-evrythngaccount">Accounts List</button>
+    {{else}}
+      <h3>There was no evrythngaccount found for that ID.</h3>
+    {{/with}}
+  </div>
+</template>

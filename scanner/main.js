@@ -1,3 +1,6 @@
+//TODO Move To CLient
+
+
 if (Meteor.isClient) {
   // startup
 
