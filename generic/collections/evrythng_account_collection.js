@@ -1,12 +1,6 @@
 // Generated on 2015-02-18 by meteor-stock.  Edit me!
 EvrythngAccounts = new Meteor.Collection("evrythngaccounts");
 
-// Note: this will allow ALL users to insert, update,
-// and delete EvrythngAccounts
-// You probably don't want this!  Add some logic to the methods below so that
-// they perform the operation only if they meet some criteria
-// (such as the user is logged in)
-
 // Database operations:
 
 EvrythngAccounts.allow({

@@ -1,24 +1,16 @@
 <template name="product">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name=apple-mobile-web-app-capable content=yes>
-    <meta name=apple-mobile-web-app-status-bar-style content=black>
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="196x196" href="images/logo.png">
-    <title>Scanner</title>
-  </head>
+  {{> head}}
 
   <body>
   {{> navbar}}
   {{#if foundproduct}}
-  {{foundproduct}}
+
   <div class="media">
     <a class="pull-left" href="#">
-      <img class="media-object" src="..." alt="...">
+      <img class="media-object img-responsive"  width="100" height="100" src="{{foundproduct.photos.[0]}}" alt="...">
     </a>
     <div class="media-body">
-      <h4 class="media-heading">Media heading</h4>
+      <h4 class="media-heading">{{foundproduct.fn}}</h4>
       {{foundproduct.description}}
     </div>
   </div>
